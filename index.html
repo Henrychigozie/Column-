@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="wrap">
+    <table aria-label="Rowspan and Colspan Demonstration">
+      <colgroup>
+        <col> <!-- A (gutter) -->
+        <col> <!-- B -->
+        <col> <!-- C -->
+        <col> <!-- D -->
+        <col> <!-- E -->
+        <col> <!-- F -->
+      </colgroup>
+  
+      <!-- Row 1 -->
+      <tr class="r1">
+        <td class="gut-green g" aria-hidden="true"></td><!-- A -->
+        <td class="g"><span class="label">Row 1</span></td><!-- B -->
+        <td class="g" colspan="2"><span class="label">ColumnSpan="2"</span></td><!-- C-D -->
+        <td class="g" colspan="2"><span class="label">ColumnSpan="2"</span></td><!-- E-F -->
+      </tr>
+  
+      <!-- Row 2 -->
+      <tr class="r2">
+        <td class="gut-brown" aria-hidden="true"></td><!-- A -->
+        <td></td><!-- B (empty cell just like the visual gap) -->
+        <!-- C-D block spans 3 rows (Rows 2–4) -->
+        <td class="p" colspan="2" rowspan="3">
+          <span class="label">RowSpan="3"</span>
+          <span class="sub">ColumnSpan="2"</span>
+        </td>
+        <!-- E-F tall pale block spans 5 rows (Rows 2–6) -->
+        <td class="p2" colspan="2" rowspan="5">
+          <span class="label">RowSpan="5"</span>
+          <span class="sub">ColumnSpan="2"</span>
+        </td>
+      </tr>
+  
+      <!-- Row 3 -->
+      <tr class="r3">
+        <td class="gut-red" aria-hidden="true"></td><!-- A -->
+        <td class="r"><span class="label">Row 3</span></td><!-- B (red strip) -->
+        <!-- C-D (rowspan continues) -->
+        <!-- E-F (rowspan continues) -->
+      </tr>
+  
+      <!-- Row 4 -->
+      <tr class="r4">
+        <td class="gut-blue" aria-hidden="true"></td><!-- A -->
+        <!-- Start of the tall orange left block: spans Rows 4–8 in column B -->
+        <td class="o" rowspan="5">
+          <span class="label">RowSpan="5"</span>
+        </td>
+        <!-- C-D (rowspan from Row 2 ends here) -->
+        <!-- E-F (rowspan continues) -->
+      </tr>
+  
+      <!-- Row 5 -->
+      <tr class="r5">
+        <td class="gut-blue g" aria-hidden="true"></td><!-- A -->
+        <!-- B is covered by the orange rowspan -->
+        <td class="b" colspan="2"><span class="label">ColumnSpan="2"</span></td><!-- C-D blue bar -->
+        <!-- E-F (pale block continues) -->
+      </tr>
+  
+      <!-- Row 6 -->
+      <tr class="r6">
+        <td class="gut-brown" aria-hidden="true"></td><!-- A -->
+        <!-- B is covered by the orange rowspan -->
+        <!-- Maroon block across C-D spanning 2 rows (Rows 6–7) -->
+        <td class="r" colspan="2" rowspan="2"><span class="label">ColumnSpan="2"</span></td>
+        <!-- E-F (pale block ends after this row) -->
+      </tr>
+  
+      <!-- Row 7 -->
+      <tr class="r7">
+        <td class="gut-gray" aria-hidden="true"></td><!-- A -->
+        <!-- B still covered by the orange rowspan -->
+        <!-- C-D maroon continues here -->
+        <td><!-- E (placeholder to preserve borders after pale block ends) --></td>
+        <td><!-- F --></td>
+      </tr>
+  
+      <!-- Row 8 -->
+      <tr class="r8">
+        <td class="gut-gray" aria-hidden="true"></td><!-- A -->
+        <!-- B still covered by the orange rowspan (this is the final row it covers) -->
+        <!-- Light blue bar across D-E; we start it at D so it visually matches the reference -->
+        <td></td><!-- C (empty) -->
+        <td class="b" colspan="2"><span class="label">ColumnSpan="2"</span></td><!-- D-E -->
+        <td></td><!-- F -->
+      </tr>
+  
+      <!-- Row 9 (bottom gray bands) -->
+      <tr class="r9">
+        <td class="gut-gray" aria-hidden="true"></td><!-- A -->
+        <td></td><!-- B (orange ended above) -->
+        <td class="gr" colspan="2"><span class="label">ColumnSpan="2"</span></td><!-- C-D -->
+        <td class="gr" colspan="2"><span class="label">ColumnSpan="2"</span></td><!-- E-F -->
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>

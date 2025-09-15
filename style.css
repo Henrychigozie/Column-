@@ -1,0 +1,173 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+                 :root {
+                   --green: #7fbf4d;
+                   --pale: #ffe9b3;
+                   --pale-2: #ffefc9;
+                   --orange: #f6b445;
+                   --red: #b64023;
+                   --blue: #76a7e9;
+                   --gray: #8c8c8c;
+                   --dark: #1e1e1e;
+                 }
+        
+                 body {
+                   margin: 0;
+                   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+                   background: #f6f7fb;
+                   /* display: grid; */
+                   /* place-items: center;
+                   min-height: 100vh; */
+                 }
+        
+                 /* Canvas wrapper just to center and add a subtle frame */
+                 /* .wrap {
+                   background: #fff;
+                   padding: 16px;
+                   border-radius: 10px;
+                   box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+                 } */
+        
+                 table {
+                   border-collapse: collapse;
+                   table-layout: fixed;
+                   width: 960px;
+                   /* 6 columns x 160px each */
+                 }
+        
+                 /* Column A is a thin gutter to echo the screenshot’s left strip */
+                 colgroup col:nth-child(1) {
+                   width: 48px;
+                 }
+        
+                 colgroup col:nth-child(n+2) {
+                   width: 182px;
+                 }
+        
+                 /* B..F */
+        
+                 /* Row heights tuned to resemble the reference */
+                 tr.r1 {
+                   height: 56px;
+                 }
+        
+                 tr.r2 {
+                   height: 54px;
+                 }
+        
+                 tr.r3 {
+                   height: 28px;
+                 }
+        
+                 tr.r4 {
+                   height: 56px;
+                 }
+        
+                 tr.r5 {
+                   height: 36px;
+                 }
+        
+                 tr.r6 {
+                   height: 90px;
+                 }
+        
+                 tr.r7 {
+                   height: 58px;
+                 }
+        
+                 tr.r8 {
+                   height: 48px;
+                 }
+        
+                 tr.r9 {
+                   height: 64px;
+                 }
+        
+                 td {
+                   border: 2px solid var(--dark);
+                   padding: 6px 8px;
+                   font-size: 14px;
+                   line-height: 1.1;
+                   text-align: center;
+                   vertical-align: middle;
+                   font-weight: 600;
+                   color: #16211c;
+                 }
+        
+                 /* Colors used in the composition */
+                 .g {
+                   background: var(--green);
+                 }
+        
+                 .p {
+                   background: var(--pale);
+                 }
+        
+                 .p2 {
+                   background: var(--pale-2);
+                 }
+        
+                 .o {
+                   background: var(--orange);
+                 }
+        
+                 .r {
+                   background: var(--red);
+                   color: #fff;
+                 }
+        
+                 .b {
+                   background: var(--blue);
+                 }
+        
+                 .gr {
+                   background: var(--gray);
+                   color: #fff;
+                 }
+        
+                 /* Left gutter bars to mimic the screenshot’s row labels/strips */
+                 .gut-green {
+                   background: #6aa84f;
+                   border-left-width: 6px;
+                 }
+        
+                 .gut-red {
+                   background: #cc0000;
+                   border-left-width: 6px;
+                 }
+        
+                 .gut-blue {
+                   background: #3d85c6;
+                   border-left-width: 6px;
+                 }
+        
+                 .gut-brown {
+                   background: #7f3600;
+                   border-left-width: 6px;
+                 }
+        
+                 .gut-gray {
+                   background: #7d7d7d;
+                   border-left-width: 6px;
+                 }
+        
+                 /* Small label style */
+                 .label {
+                   font-weight: 700;
+                   font-size: 13px;
+                   opacity: .9;
+                 }
+        
+                 .sub {
+                   display: block;
+                   font-weight: 700;
+                   font-size: 12px;
+                   opacity: .85;
+                   margin-top: 2px;
+                 }
+        
+        
